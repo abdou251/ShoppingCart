@@ -39,24 +39,18 @@ function Cart() {
                       <div className='flex items-center gap-2'>
                         <button
                           onClick={() => decreaseCartQuantity(item.id)}
-                          className='bg-blue-600 w-8 h-8 rounded-md text-white font-medium flex justify-center items-center hover:bg-blue-800'
+                          className='  text-blue-800 font-medium flex justify-center items-end w-2 h-8 text-3xl'
                         >
                           -
                         </button>
-                        <span className='text-lg'>{item.quantity}</span>
+                        <span className='text-2xl'>{item.quantity}</span>
                         <button
                           onClick={() => increaseCartQuantity(item.id)}
-                          className='bg-blue-600 w-8 h-8 rounded-md text-white font-medium flex justify-center items-center hover:bg-blue-800'
+                          className='text-blue-800 font-medium flex justify-center items-end w-2 h-8 text-3xl'
                         >
                           +
                         </button>
                       </div>
-                      <button
-                        onClick={() => removeFromCart(item.id)}
-                        className='text-red-500 hover:text-red-700 font-medium'
-                      >
-                        Remove
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -64,6 +58,12 @@ function Cart() {
                   <p className='text-lg font-medium'>
                     {formatCurrency(item.quantity * (storeItem?.price || 0))}
                   </p>
+                  <button
+                    onClick={() => removeFromCart(item.id)}
+                    className='text-red-500 hover:text-red-700 font-medium text-xl'
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
             )
