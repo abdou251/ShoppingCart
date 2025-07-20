@@ -18,10 +18,6 @@ function App() {
     'shopping-cart',
     []
   )
-  const cartQuantity = cartItems.reduce(
-    (quantity: number, item: CartItem) => item.quantity + quantity,
-    0
-  )
 
   function increaseCartQuantity(id: number) {
     setCartItems((currItems) => {
