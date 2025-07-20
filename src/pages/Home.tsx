@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Home() {
   return (
     <div className='text-gray-900 dark:text-white'>

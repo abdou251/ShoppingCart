@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import StoreContext from '../context/StoreContext'
 import { formatCurrency } from '../utilities/formatCurrency'
 import storeItems from '../data/items.json'
